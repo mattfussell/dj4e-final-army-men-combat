@@ -48,11 +48,11 @@ I'll need the following samples:
 
 Credit where credit is due:
 
-[One Page Rules](https://www.onepagerules.com/): Army Men Combat
-[Freesvg.org](https://freesvg.org/camouflage-pattern-vector-image): Camo Pattern Image
-[Django for Everybody](https://www.dj4e.com/): Learn Django
-[Colormind.io](http://colormind.io/): Color Selection
-[W3 Schools: HTML Color Picker](https://www.w3schools.com/colors/colors_picker.asp): Color Refinement
-[Bootstrap 5](https://getbootstrap.com/): Coding the parts I didn't want to
-[Bootstrap 5 Docs](https://getbootstrap.com/docs/5.0/getting-started/introduction/): Bootstrap 5 Reference Manual
-[Google Fonts](https://fonts.google.com/): There's no excuse for lame fonts
+* [One Page Rules](https://www.onepagerules.com/): Army Men Combat
+* [Freesvg.org](https://freesvg.org/camouflage-pattern-vector-image): Camo Pattern Image
+* [Django for Everybody](https://www.dj4e.com/): Learn Django
+* [Colormind.io](http://colormind.io/): Color Selection
+* [W3 Schools: HTML Color Picker](https://www.w3schools.com/colors/colors_picker.asp): Color Refinement
+* [Bootstrap 5](https://getbootstrap.com/): Coding the parts I didn't want to
+* [Bootstrap 5 Docs](https://getbootstrap.com/docs/5.0/getting-started/introduction/): Bootstrap 5 Reference Manual
+* [Google Fonts](https://fonts.google.com/): There's no excuse for lame fonts
