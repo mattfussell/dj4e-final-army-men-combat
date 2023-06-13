@@ -42,3 +42,13 @@ I'll need the following samples:
   * Display average star rating
 * Roster rating detail page
   * Award stars to a roster
+
+
+## Resources for this project
+
+Credit where credit is due:
+
+[One Page Rules](https://www.onepagerules.com/): Army Men Combat
+[Freesvg.org](https://freesvg.org/camouflage-pattern-vector-image): Camo Pattern Image
+[Django for Everybody](https://www.dj4e.com/): Learn Django
+[Colormind.io](http://colormind.io/): Color Selection
