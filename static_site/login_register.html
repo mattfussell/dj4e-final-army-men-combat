@@ -22,7 +22,7 @@
 
   <!-- Site CSS -->
   <script src="script.js" defer></script>
-  <title>AMC | Home</title>
+  <title>AMC | Roster Commander</title>
 </head>
 <body>
 
@@ -36,10 +36,10 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Roster Commander (Login/Register)</a>
+            <a class="nav-link active" aria-current="page" href="#">Roster Commander (Login/Register)</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Roster Editor</a>
@@ -66,20 +66,25 @@
 
     <h1>Army Men Combat</h1>
 
-    <section id="welcome">
-      <h2>Attention, soldiers!</h2>
-      <p>Prepare for an epic battle like no other with Army Men Combat! It's time to unleash your inner hero and lead your plastic troops to victory in the ultimate tabletop adventure!</p>
-      <p>With Army Men Combat, all you need is your trusty army of plastic soldiers, a handful of six-sided dice, and a single page of rules! No need for complicated rulebooks or hours of setup. This game is all about fast-paced, action-packed fun!</p>
-      <p>Gather your friends and take command of your own platoon, fighting intense battles across the living room, kitchen table, or even the backyard! Will you storm the enemy's fortress or set up a cunning ambush? The choice is yours, soldier!</p>
-    </section>
+    <form>
 
-    <section id="app-description">
-      <h2>Calling All Commanders!</h2>
-      <p>Get ready to unlock the power of your imagination with the incredible Roster Commander app! With Roster Commander, you become the mastermind behind every victory! Build your unstoppable force with just a few taps, create unique combinations, and witness your roster come to life! </p>
-      <p>The power is in your hands as you create and persistently store your game rosters in your personal account. Say goodbye to pen and paper, soldier! Your lists are safe and sound, ready to be summoned whenever you need them.</p>
-      <p>But it doesn't stop there! The Roster Commander community is bustling with passionate strategists just like you! Explore other players' rosters, rate them with your battle-tested expertise, and see how your creations stack up against the best in the game!</p>
-      <p>With Roster Commander, the possibilities are endless. Access game rules on the go, fine-tune your tactics, and build an army that will go down in history! The battle is just a tap away!</p>
-    </section>
+      <h2>Report for Duty, Soldier!</h2>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    
+    </form>
 
   </main>
   
