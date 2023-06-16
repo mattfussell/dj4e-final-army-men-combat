@@ -25,7 +25,7 @@
 
   <!-- Site CSS -->
   <script src="script.js" defer></script>
-  <title>AMC | Roster Commander</title>
+  <title>AMC | Roster Editor</title>
 </head>
 <body>
 
@@ -42,16 +42,16 @@
             <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="login_register.html">Roster Commander (Login/Register)</a>
+            <a class="nav-link" href="login_register.html">Roster Commander (Login/Register)</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="roster_editor.html">Roster Editor</a>
+            <a class="nav-link active" aria-current="page" href="roster_editor.html">Roster Editor</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="game_view.html">Game View</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="rosters_ratings.html">Roster Ratings</a>
+            <a class="nav-link" href="roster_ratings.html">Roster Ratings</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="downloads/OPR_-_Army_Men_Combat_v2.0.pdf" download>Download the Rules</a>
@@ -66,21 +66,73 @@
 
     <h1>Army Men Combat</h1>
 
-    <form>
+    <section id="my_rosters">
+      <h2>My Rosters</h2>
 
-      <h2>Report for Duty, Soldier!</h2>
-      <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-      </div>
-      <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1">
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    
-    </form>
+      <p><a href="#" class="btn btn-outline-success">New Roster</a></p>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Name</th>
+            <th scope="col">Points</th>
+            <th scope="col">Rating</th>
+            <th scope="col">Public</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"><a href="#" class="btn btn-success">Start Game</a></th>
+            <td>All Rifles!</td>
+            <td>300</td>
+            <td>4.5</td>
+            <td>
+              <div class="form-check form-switch">
+                <input type="checkbox" class="form-check-input" id="visibility_switch" name="visibility_switch">
+              </div>
+            </td>
+            <td>
+              <a href="#" class="btn btn-warning">Edit</a>
+              <a href="#" class="btn btn-danger">Delete</a>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row"><a href="#" class="btn btn-success">Start Game</a></th>
+            <td>All Jeeps!</td>
+            <td>290</td>
+            <td>3.2</td>
+            <td>
+              <div class="form-check form-switch">
+                <input type="checkbox" class="form-check-input" id="visibility_switch" name="visibility_switch">
+              </div>
+            </td>
+            <td>
+              <a href="#" class="btn btn-warning">Edit</a>
+              <a href="#" class="btn btn-danger">Delete</a>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row"><a href="#" class="btn btn-success">Start Game</a></th>
+            <td>Mixed Infantry</td>
+            <td>280</td>
+            <td>4.8</td>
+            <td>
+              <div class="form-check form-switch">
+                <input type="checkbox" class="form-check-input" id="visibility_switch" name="visibility_switch">
+              </div>
+            </td>
+            <td>
+              <a href="#" class="btn btn-warning">Edit</a>
+              <a href="#" class="btn btn-danger">Delete</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+    </section>
 
   </main>
   

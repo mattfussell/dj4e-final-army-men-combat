@@ -34,14 +34,10 @@ I'll need the following samples:
   * Button to edit an existing list
   * Button to delete lists
   * Toggle to make list public or keep private
-* user roster editor
-  * Create new lists
-  * Edit existing lists
+  * Display average star rating
 * Gametime roster viewer
 * Roster rating list
-  * Display average star rating
-* Roster rating detail page
-  * Award stars to a roster
+  * Award thumbs to a roster
 
 
 ## Resources for this project
@@ -56,3 +52,4 @@ Credit where credit is due:
 * [Bootstrap 5](https://getbootstrap.com/): Coding the parts I didn't want to
 * [Bootstrap 5 Docs](https://getbootstrap.com/docs/5.0/getting-started/introduction/): Bootstrap 5 Reference Manual
 * [Google Fonts](https://fonts.google.com/): There's no excuse for lame fonts
+* [Bootstrap Icons](https://icons.getbootstrap.com/): Trying an alternative to Font-Awesome
