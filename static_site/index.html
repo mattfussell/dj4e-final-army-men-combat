@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   
   <!-- Site Overrides -->
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
 
   <!-- Bootstrap 5 JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
@@ -32,63 +32,75 @@
   <!-- navigation-->
   <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">AMC Logo</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="login_register.html">Roster Commander (Login/Register)</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="roster_editor.html">Roster Editor</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Game View</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="roster_ratings.html">Roster Ratings</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="downloads/OPR_-_Army_Men_Combat_v2.0.pdf" download>Download the Rules</a>
-          </li>
-        </ul>
+      
+      <div class="container">
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <a class="navbar-brand d-none d-lg-block" href="#">AMC Logo</a>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login_register.html">Roster Commander (Login/Register)</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="roster_editor.html">Roster Editor</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="game_view.html">Game View</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="roster_ratings.html">Roster Ratings</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="downloads/OPR_-_Army_Men_Combat_v2.0.pdf" download>Download the Rules</a>
+            </li>
+          </ul>
+        </div>
       </div>
+
     </div>
   </nav>
 
   <!-- page content -->
   <main>
 
-    <h1>Army Men Combat</h1>
+    <div class="container">
+      <h1 class="text-center">Army Men Combat</h1>
 
-    <section id="welcome">
-      <h2>Attention, soldiers!</h2>
-      <p>Prepare for an epic battle like no other with Army Men Combat! It's time to unleash your inner hero and lead your plastic troops to victory in the ultimate tabletop adventure!</p>
-      <p>With Army Men Combat, all you need is your trusty army of plastic soldiers, a handful of six-sided dice, and a single page of rules! No need for complicated rulebooks or hours of setup. This game is all about fast-paced, action-packed fun!</p>
-      <p>Gather your friends and take command of your own platoon, fighting intense battles across the living room, kitchen table, or even the backyard! Will you storm the enemy's fortress or set up a cunning ambush? The choice is yours, soldier!</p>
-    </section>
+      <section id="welcome">
+        <h2>Attention, soldiers!</h2>
+        <p>Prepare for an epic battle like no other with Army Men Combat! It's time to unleash your inner hero and lead your plastic troops to victory in the ultimate tabletop adventure!</p>
+        <p>With Army Men Combat, all you need is your trusty army of plastic soldiers, a handful of six-sided dice, and a single page of rules! No need for complicated rulebooks or hours of setup. This game is all about fast-paced, action-packed fun!</p>
+        <p>Gather your friends and take command of your own platoon, fighting intense battles across the living room, kitchen table, or even the backyard! Will you storm the enemy's fortress or set up a cunning ambush? The choice is yours, soldier!</p>
+      </section>
+  
+      <section id="app-description">
+        <h2>Calling All Commanders!</h2>
+        <p>Get ready to unlock the power of your imagination with the incredible Roster Commander app! With Roster Commander, you become the mastermind behind every victory! Build your unstoppable force with just a few taps, create unique combinations, and witness your roster come to life! </p>
+        <p>The power is in your hands as you create and persistently store your game rosters in your personal account. Say goodbye to pen and paper, soldier! Your lists are safe and sound, ready to be summoned whenever you need them.</p>
+        <p>But it doesn't stop there! The Roster Commander community is bustling with passionate strategists just like you! Explore other players' rosters, rate them with your battle-tested expertise, and see how your creations stack up against the best in the game!</p>
+        <p>With Roster Commander, the possibilities are endless. Access game rules on the go, fine-tune your tactics, and build an army that will go down in history! The battle is just a tap away!</p>
+      </section>
+    </div>
 
-    <section id="app-description">
-      <h2>Calling All Commanders!</h2>
-      <p>Get ready to unlock the power of your imagination with the incredible Roster Commander app! With Roster Commander, you become the mastermind behind every victory! Build your unstoppable force with just a few taps, create unique combinations, and witness your roster come to life! </p>
-      <p>The power is in your hands as you create and persistently store your game rosters in your personal account. Say goodbye to pen and paper, soldier! Your lists are safe and sound, ready to be summoned whenever you need them.</p>
-      <p>But it doesn't stop there! The Roster Commander community is bustling with passionate strategists just like you! Explore other players' rosters, rate them with your battle-tested expertise, and see how your creations stack up against the best in the game!</p>
-      <p>With Roster Commander, the possibilities are endless. Access game rules on the go, fine-tune your tactics, and build an army that will go down in history! The battle is just a tap away!</p>
-    </section>
+
 
   </main>
   
   <!-- footer -->
   <footer>
-    <p>Army Men Combat is the creation of One Page Rules. You can find their current list of games and miniature files for 3D printing at <a href="https://www.onepagerules.com/">onepagerules.com</a>.</p>
-    <p>Since this project is based on their property, everything is free under the MIT license.</p>
-    <p>The repository will be primarily public until API Keys for social authentication become involved. A second, necessarily private repo will be made in order to keep the site going once social auth is implemented.</p>
-    <p>Copyright &copy; <span id="ui_current-year"> YEAR </span></p>
+    <div class="container">
+      <p>Army Men Combat is the creation of One Page Rules. You can find their current list of games and miniature files for 3D printing at <a href="https://www.onepagerules.com/">onepagerules.com</a>.</p>
+      <p>Since this project is based on their property, everything is free under the MIT license.</p>
+      <p>The repository will be primarily public until API Keys for social authentication become involved. A second, necessarily private repo will be made in order to keep the site going once social auth is implemented.</p>
+      <p class="text-center">Copyright &copy; <span id="ui_current-year"> YEAR </span></p>
+    </div>
+
   </footer>
 
 </body>
