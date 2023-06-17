@@ -1,0 +1,102 @@
+// Docs: https://dbml.dbdiagram.io/docs
+// Visualizer: https://dbdiagram.io
+
+// django-provided user model
+// users can have 
+Table users {
+  id integer [pk]
+  username varchar
+}
+
+// each list is associated with one user
+Table lists {
+  id integer [pk]
+  created_at timestamp
+  title varchar
+  user_id integer [ref: > users.id]
+  is_public Boolean
+}
+
+Table infantry {
+  id integer [pk]
+  name varchar
+  weapon_id integer [ref: > weapons.id]
+  min_squad_count integer
+  min_squad_points integer
+  max_squad_count integer
+  max_squad_points integer
+  special varchar
+  has_grenade_or_c4 Boolean
+  has_bazooka_or_flamethrower Boolean
+}
+
+Table weapons {
+  id integer [pk]
+  name varchar
+  range integer
+  min_attack_count integer
+  max_attack_count integer
+  doubles_vs_vehicle Boolean
+}
+
+// vehicles can have a weapon
+Table vehicles {
+  id integer [pk]
+  name varchar
+  armor_bonus integer
+  weapon_id integer [ref: > weapons.id]
+  special varchar
+  unit_count integer
+  unit_points integer
+}
+
+Table infantry_upgrades {
+  id integer [pk]
+  name varchar
+  weapon_id integer [ref: > weapons.id]
+  upgrade_points integer
+}
+
+// vehicle upgrade can be a weapon
+Table vehicle_upgrades {
+  id integer [pk]
+  name varchar
+  transport_bonus integer
+  armor_bonus integer
+  upgrade_points integer
+  weapon_id integer [ref: > weapons.id]
+}
+
+// a list entry can either be a vehicle unit or an infantry unit
+Table j_list_entry {
+  list_id integer [ref: > lists.id]
+  infantry_id integer [ref: > infantry.id]
+  vehicle_id integer [ref: > vehicles.id]
+}
+
+// users can create multiple lists
+Table j_user_list {
+  user_id integer [ref: > users.id]
+  list_id integer [ref: > lists.id]
+}
+
+// selected infantry can take multiple upgrades
+Table j_infantry_upgrade {
+  infantry_id integer [ref: > infantry.id]
+  infantry_upgrade_id integer [ref: > infantry_upgrades.id]
+}
+
+// selected vehicles can take multiple upgrades
+Table j_vehicle_upgrade {
+  vehicle_id integer [ref: > vehicles.id]
+  vehicle_upgrade_id integer [ref: > vehicle_upgrades.id]
+}
+
+// users can rate multiple lists
+// users cannot rate their own lists
+// lists can have multiple ratings
+Table j_user_list_ratings {
+  user_id integer [ref: > users.id]
+  list_id integer [ref: > lists.id]
+  rating integer
+}
