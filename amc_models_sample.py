@@ -5,6 +5,11 @@ from django.conf import settings
 
 # Users table
 class User(models.Model):
+        
+    class Meta:
+        verbose_name_plural = "Users"
+
+
     username = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 
     def __str__(self):
@@ -13,6 +18,11 @@ class User(models.Model):
 
 # Lists table
 class Lists(models.Model):
+
+    class Meta:
+        verbose_name_plural = "Army Lists"
+
+    
     title = models.CharField(max_length=100)
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
@@ -24,6 +34,11 @@ class Lists(models.Model):
 
 # Infantry table
 class Infantry(models.Model):
+
+    class Meta:
+        verbose_name_plural = "Infantry Models"
+
+
     name = models.CharField(max_length=100)
     weapon_id = models.ForeignKey(models.Weapons, on_delete=models.CASCADE)
     min_squad_count = models.IntegerField(default=0)
@@ -40,6 +55,11 @@ class Infantry(models.Model):
 
 # Vehicle table
 class Vehicle(models.Model):
+
+    class Meta:
+        verbose_name_plural = "Vehicle Models"
+
+
     name = models.CharField(max_length=100)
     armor_bonus = models.IntegerField(default=0)
     weapon_id = models.ForeignKey(models.Weapons, on_delete=models.CASCADE)
@@ -53,6 +73,11 @@ class Vehicle(models.Model):
 
 # Weapons table
 class Weapons(models.Model):
+
+    class Meta:
+        verbose_name_plural = "Weapons"
+
+
     name = models.CharField(max_length=100)
     range = models.IntegerField(default=0)
     min_attack_count = models.IntegerField(default=0)
@@ -65,6 +90,11 @@ class Weapons(models.Model):
 
 # Infantry_Upgrades table
 class Infantry_Upgrades(models.Model):
+
+    class Meta:
+        verbose_name_plural = "Infantry Upgrades"
+
+
     name = models.CharField(max_length=100)
     weapon_id = models.ForeignKey(models.Weapons, on_delete=models.CASCADE)
     upgrade_points = models.IntegerField(default=0)
@@ -75,6 +105,11 @@ class Infantry_Upgrades(models.Model):
 
 # Vehicle_Upgrades table
 class Vehicle_Upgrades(models.Model):
+
+    class Meta:
+        verbose_name_plural = "Vehicle Upgrades"
+
+
     name = models.CharField(max_length=100)
     transport_bonus = models.IntegerField(default=0)
     armor_bonus = models.IntegerField(default=0)
@@ -87,12 +122,22 @@ class Vehicle_Upgrades(models.Model):
 
 # User / List join table
 class j_user_list(models.Model):
+
+    class Meta:
+        verbose_name_plural = "User Lists"
+    
+    
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     list_id = models.ForeignKey(Lists, on_delete=models.CASCADE)
 
 
 # User / List Rating join table
 class j_user_list_rating(models.Model):
+
+    class Meta:
+        verbose_name_plural = "List Ratings"
+    
+    
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     list_id = models.ForeignKey(Lists, on_delete=models.CASCADE)
     rating = models.IntegerField(default=0)
@@ -100,6 +145,11 @@ class j_user_list_rating(models.Model):
 
 # List / Entry join table
 class j_list_entry(models.Model):
+
+    class Meta:
+        verbose_name_plural = "List Entries"
+
+
     list_id = models.ForeignKey(Lists, on_delete=models.CASCADE)
     infantry_id = models.ForeignKey(Infantry, on_delete=models.CASCADE)
     vehicle_id = models.ForeignKey(Vehicle, on_delete=models.CASCADE)
@@ -107,11 +157,21 @@ class j_list_entry(models.Model):
 
 # Infantry / Upgrade join table
 class j_infantry_upgrade(models.Model):
+
+    class Meta:
+        verbose_name_plural = "Infantry Upgrades"
+
+
     infantry_id = models.ForeignKey(Infantry, on_delete=models.CASCADE)
     infantry_upgrade_id = models.ForeignKey(Infantry_Upgrades, on_delete=models.CASCADE)
 
 
 # Vehicle / Upgrade join table
 class j_vehicle_upgrade(models.Model):
+
+    class Meta:
+        verbose_name_plural = "Vehicle Upgrades"
+
+
     vehicle_id = models.ForeignKey(Vehicle, on_delete=models.CASCADE)
     vehicle_upgrade_id = models.ForeignKey(Vehicle_Upgrades, on_delete=models.CASCADE)
