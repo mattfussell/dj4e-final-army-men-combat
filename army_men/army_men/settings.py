@@ -28,7 +28,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
-    'xtheravenx.pythonanywhere.com'
+    'xtheravenx.pythonanywhere.com',
+    '192.168.1.54', # ww
 ]
 
 
