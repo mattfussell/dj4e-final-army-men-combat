@@ -20,7 +20,6 @@ Table lists {
 Table infantry {
   id integer [pk]
   name varchar
-  weapon_id integer [ref: > weapons.id]
   min_squad_count integer
   min_squad_points integer
   max_squad_count integer
@@ -28,12 +27,13 @@ Table infantry {
   special varchar
   has_grenade_or_c4 Boolean
   has_bazooka_or_flamethrower Boolean
+  weapon_id integer [ref: > weapons.id]
 }
 
 Table weapons {
   id integer [pk]
   name varchar
-  range integer
+  firing_range integer
   min_attack_count integer
   max_attack_count integer
   doubles_vs_vehicle Boolean
@@ -44,17 +44,17 @@ Table vehicles {
   id integer [pk]
   name varchar
   armor_bonus integer
-  weapon_id integer [ref: > weapons.id]
   special varchar
   unit_count integer
   unit_points integer
+  weapon_id integer [ref: > weapons.id]
 }
 
 Table infantry_upgrades {
   id integer [pk]
   name varchar
-  weapon_id integer [ref: > weapons.id]
   upgrade_points integer
+  weapon_id integer [ref: > weapons.id]
 }
 
 // vehicle upgrade can be a weapon
