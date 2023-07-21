@@ -66,7 +66,7 @@ class Vehicle(models.Model):
     special = models.CharField(max_length=250)
     unit_count = models.IntegerField(default=0)
     unit_points = models.IntegerField(default=0)
-    weapon_id = models.ForeignKey('Weapons', on_delete=models.CASCADE)
+    weapon_id = models.ForeignKey('Weapons', on_delete=models.CASCADE, blank=True, null=True)
 
     def __str__(self):
         return self.name
@@ -87,7 +87,19 @@ class Weapons(models.Model):
 
     def __str__(self):
         return self.name
-    
+
+
+# Rules table
+class Rules(models.Model):
+
+    class Meta: 
+        verbose_name_plural = "Rules Reference"
+
+
+    section = models.CharField(max_length=100)
+    rule_type = models.CharField(max_length=100)
+    rule_text = models.TextField(max_length=500)
+
 
 # Infantry_Upgrades table
 class Infantry_Upgrades(models.Model):
@@ -115,7 +127,7 @@ class Vehicle_Upgrades(models.Model):
     transport_bonus = models.IntegerField(default=0)
     armor_bonus = models.IntegerField(default=0)
     upgrade_points = models.IntegerField(default=0)
-    weapon_id = models.ForeignKey('Weapons', on_delete=models.CASCADE)
+    weapon_id = models.ForeignKey('Weapons', on_delete=models.CASCADE, blank=True, null=True)
 
     def __str__(self):
         return self.name

@@ -25,8 +25,6 @@ Table infantry {
   max_squad_count integer
   max_squad_points integer
   special varchar
-  has_grenade_or_c4 Boolean
-  has_bazooka_or_flamethrower Boolean
   weapon_id integer [ref: > weapons.id]
 }
 
@@ -47,7 +45,7 @@ Table vehicles {
   special varchar
   unit_count integer
   unit_points integer
-  weapon_id integer [ref: > weapons.id]
+  weapon_id integer [ref: > weapons.id, default: null]
 }
 
 Table infantry_upgrades {
@@ -64,7 +62,14 @@ Table vehicle_upgrades {
   transport_bonus integer
   armor_bonus integer
   upgrade_points integer
-  weapon_id integer [ref: > weapons.id]
+  weapon_id integer [ref: > weapons.id, default: null]
+}
+
+Table rules {
+  id integer [pk]
+  section varchar
+  rule_type varchar
+  rule_text varchar
 }
 
 // a list entry can either be a vehicle unit or an infantry unit
