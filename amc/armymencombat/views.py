@@ -4,4 +4,5 @@ from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
-    return HttpResponse("Army Men Combat App is functional.")
+    context = {}
+    return render(request, 'home.html', context)
